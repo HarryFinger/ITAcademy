@@ -1,2 +1,0 @@
-# ITAcademy
-C++ courses
