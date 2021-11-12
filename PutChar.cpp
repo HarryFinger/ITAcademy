@@ -4,7 +4,7 @@ void print(int val)
 {
     if (val < 0)
     {
-        val = ~val + 1;1
+        val = ~val + 1;1234234324
         putchar('-');
     }
 
