@@ -1,10 +1,20 @@
+#ifdef _MSC_VER
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+
 #include <cstdio>
+#include <cstdlib>
 
 void print(int val)
 {
+    if (val == 0)
+    {
+        putchar('0');
+    }
+
     if (val < 0)
     {
-        val = ~val + 1;
+        val = -val;
         putchar('-');
     }
 
@@ -18,19 +28,22 @@ void print(int val)
 
     while (invVal != 0)
     {
-        putchar(invVal % 10 + 48);
+        putchar(invVal % 10 + '0');
         invVal = invVal / 10;
     }
 }
 
 
-int main()
+int main (int argc, char* argv[])
 {
+
     int val;
 
     printf("Type a number:\n");
 
-    scanf_s("%d", &val);
+    scanf("%d", &val);
 
     print(val);
+
+    return 0;
 }
